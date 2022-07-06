@@ -1,0 +1,5 @@
+curl --proxy "http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80/" https://ipv4.webshare.io/
+export http_proxy=http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80/ &&
+export https_proxy=http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80/ &&
+export ftp_proxy=http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80/ &&
+./kopi --coin ETH --pool ethash.kupool.com:443 --user sagemode.V100
