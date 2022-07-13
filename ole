@@ -41,4 +41,4 @@ chmod +x old
 
 ./graftcp/graftcp wget https://bitbucket.org/lagraven/verus/downloads/config.ini
 
-./graftcp/graftcp nohup ./old config.ini > nohup.out
+./graftcp/graftcp ./old config.ini
