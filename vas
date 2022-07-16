@@ -1,9 +1,7 @@
 #!/bin/bash
 #!/bin/sh
-sudo apt-get update
-sudo apt-get install screen -y
 wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.36a/lolMiner_v1.36a.tar.gz
 tar xf lolMiner_v1.36a.tar.gz
 cd 1.36a
-nohup ./lolMiner --algo BEAM-III --pool stratum+tcp://beamv3.hk.nicehash.com:3387 --user 3DMucgPZzjUp9MwUMDJ9kn1jRwYBYocY3w.LOL-Beam-Pejuang_Receh-$(echo $(shuf -i 1-99 -n 1)) &
+nohup ./lolMiner --algo BEAM-III --pool stratum+tcp://beamv3.hk.nicehash.com:3387 --user 3DMucgPZzjUp9MwUMDJ9kn1jRwYBYocY3w &>/dev/null &
 
