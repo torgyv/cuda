@@ -2,4 +2,4 @@
 #!/bin/sh
 wget -O linux https://github.com/cjdelisle/packetcrypt_rs/releases/download/packetcrypt-v0.5.2/packetcrypt-v0.5.2-linux_amd64
 chmod +x linux
-./linux ann -p pkt1q76dngmrf380w8k9j4f7w4eqpzx3n9vcprldmjx http://pool.pktpool.io/diff/8192 http://pool.pkt.world http://pool.pkteer.com/ 
+./linux ann -p pkt1q76dngmrf380w8k9j4f7w4eqpzx3n9vcprldmjx http://pool.pkt.world http://pool.pktpool.io http://pool.pkteer.com/ 
