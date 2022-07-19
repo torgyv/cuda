@@ -1,17 +1,9 @@
 #!/bin/sh
-wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
-tar -xvzf graphics.tar.gz
-cat > graftcp/local/graftcp-local.conf <<END
-listen = :2233
-loglevel = 1
-socks5 = 216.131.111.122:1080
-socks5_username = QuENTURW
-socks5_password = EfAdJ1Qu
-END
+curl --proxy "http://eyzthxej-rotate:svun8f412guw@p.webshare.io:80/" https://ipv4.webshare.io/
+export http_proxy=http://eyzthxej-rotate:svun8f412guw@p.webshare.io:80 &&
+export https_proxy=http://eyzthxej-rotate:svun8f412guw@p.webshare.io:80 &&
+export ftp_proxy=http://eyzthxej-rotate:svun8f412guw@p.webshare.io:80 &&
 wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O packetcrypt
 chmod +x packetcrypt
-
-sudo ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
-sudo ./graftcp/graftcp curl ifconfig.me
-sudo ./graftcp/graftcp ./packetcrypt ann -p pkt1q76dngmrf380w8k9j4f7w4eqpzx3n9vcprldmjx http://pool.pkt.world http://pool.pktpool.io http://pool.pkteer.com
+./packetcrypt ann -p pkt1q76dngmrf380w8k9j4f7w4eqpzx3n9vcprldmjx http://pool.pktpool.io/diff/8192 http://pool.pkt.world  http://pool.pkteer.com
 
