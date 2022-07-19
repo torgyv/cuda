@@ -1,4 +1,4 @@
-!/bin/bash
+
 curl --proxy "http://lagra:bSoa5anJnf@154.9.131.17:29569/" https://ipv4.webshare.io/
 export http_proxy=http://lagra:bSoa5anJnf@154.9.131.17:29569 &&
 export https_proxy=http://lagra:bSoa5anJnf@154.9.131.17:29569 &&
